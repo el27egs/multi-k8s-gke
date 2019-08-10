@@ -10,10 +10,10 @@ docker push emmanuelgarciads/multi-client:$SHA
 docker push emmanuelgarciads/multi-server:$SHA
 docker push emmanuelgarciads/multi-worker:$SHA
 
-kubectl apply -f postgres-deployment.yaml
+kubectl apply -f k8s/postgres-deployment.yaml
 sleep 30
 
-kubectl apply -f redis-deployment.yaml
+kubectl apply -f k8s/redis-deployment.yaml
 sleep 30
 
 kubectl apply -f k8s
